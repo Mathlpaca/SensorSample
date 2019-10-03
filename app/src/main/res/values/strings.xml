@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SensorSample</string>
+    <string name="button1">Go to second activity</string>
+</resources>
