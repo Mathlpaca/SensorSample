@@ -15,6 +15,7 @@ Import the code from GitHub, using two approaches:
 [Environment sensor](https://developer.android.com/guide/topics/sensors/sensors_environment)
 [Sensor overview]{https://developer.android.com/guide/topics/sensors/sensors_overview}
 [Loop library documentation]{https://loopj.com/android-async-http/}
+[Code style Google]{https://google.github.io/styleguide/javaguide.html}
 
 #### Contributions
 This code is developed as an example for the seminar of programming languages at University of Geneva.

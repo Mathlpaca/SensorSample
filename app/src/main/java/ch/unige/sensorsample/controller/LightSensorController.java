@@ -8,11 +8,10 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.util.Log;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import ch.unige.sensorsample.R;
+import ch.unige.sensorsample.view.SecondActivity;
 
 /*
  * This class defines the controller for light sensor in order to implement a MVC patter. The follow class permit to manage
@@ -29,8 +28,7 @@ public class LightSensorController implements SensorEventListener {
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
             Log.d("LightSensorController", String.valueOf(event.values[0]));
-            TextView txViewLightSensor = activity.findViewById(R.id.textViewLight);
-            txViewLightSensor.setText(String.valueOf(event.values[0]));
+            new SecondActivity().printSensorValue( String.valueOf(event.values[0]));
         }
     }
 

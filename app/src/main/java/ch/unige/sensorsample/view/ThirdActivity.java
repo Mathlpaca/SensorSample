@@ -70,7 +70,6 @@ public class ThirdActivity extends AppCompatActivity {
                 }
 
             }
-
             @Override
             public void onFailure(int statusCode, cz.msebera.android.httpclient.Header[] headers, byte[] responseBody, Throwable error) {
                 // called when response HTTP status is "4XX" (eg. 401, 403, 404)

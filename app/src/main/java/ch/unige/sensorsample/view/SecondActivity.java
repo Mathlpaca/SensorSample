@@ -9,6 +9,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,6 +25,7 @@ public class SecondActivity extends AppCompatActivity {
     private SensorManager sensorManager;
     private Sensor sensor;
     private LightSensorController lightSensorController;
+    private static AppCompatActivity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,12 @@ public class SecondActivity extends AppCompatActivity {
         sensorManager = (SensorManager) getSystemService(Service.SENSOR_SERVICE); //register sensor for detecting light
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
         lightSensorController = new LightSensorController(this);
+        activity = this;
+    }
+
+    public void printSensorValue(String value) {
+        TextView txViewLightSensor = activity.findViewById(R.id.textViewLight);
+        txViewLightSensor.setText(String.valueOf(value));
     }
 
     @Override
