@@ -30,28 +30,29 @@ public class ChangeActivityController implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         //simply switch that permits to change activity
         switch (nameOfActivity) {
             case ActivityModel.ACTIVITY_NAME_MAIN: {
                 Log.d("Debug", "Switch activity from main to second");
-                Intent intent = new Intent(context, MainActivity.class); //define intent in order to show new activity
-                context.startActivity(intent);
+                intent = new Intent(context, MainActivity.class); //define intent in order to show new activity
                 break;
             }
             case ActivityModel.ACTIVITY_NAME_SECOND: {
                 Log.d("Debug", "Switch activity from second to main");
-                Intent intent = new Intent(context, SecondActivity.class);
-                context.startActivity(intent);
+                intent = new Intent(context, SecondActivity.class);
                 break;
             }
             case ActivityModel.ACTIVITY_NAME_THIRD: {
-                Intent intent = new Intent(context, ThirdActivity.class);
-                context.startActivity(intent);
+                intent = new Intent(context, ThirdActivity.class);
                 break;
             }
             default:
                 throw new IllegalStateException("Unexpected value: " + nameOfActivity); //launch an exception if the activity name is not define in model
         }
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+
     }
 
     public void setNameOfActivity(String nameOfActivity) {
