@@ -12,9 +12,13 @@ Import the code from GitHub, using two approaches:
 ### Links
 
 [Model-View-Controller design pattern](https://www.tutorialspoint.com/design_pattern/mvc_pattern.htm)
+
 [Environment sensor](https://developer.android.com/guide/topics/sensors/sensors_environment)
+
 [Sensor overview](https://developer.android.com/guide/topics/sensors/sensors_overview)
+
 [Loop library documentation](https://loopj.com/android-async-http/)
+
 [Code style Google](https://google.github.io/styleguide/javaguide.html)
 
 #### Contributions
