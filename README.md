@@ -1,6 +1,6 @@
 # Android Example Application
 This is an example Android Application that permits to manage gyroscope and light sensor.
-It is made uo from three (3) activity: main, second and third.
+It is made up from three (3) activity: main, second and third.
 Moreover, an async **HTTP GET** is implemented with _loop library_.
 The mangare sensor is implemented with Model-View-Controller design patter.
 
