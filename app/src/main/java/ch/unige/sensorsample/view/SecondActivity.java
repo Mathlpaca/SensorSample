@@ -38,7 +38,7 @@ public class SecondActivity extends AppCompatActivity {
         buttonToFirstActivity.setOnClickListener(changeActivityController); //hook the listener to button, in order to capture the click (tap)
         sensorManager = (SensorManager) getSystemService(Service.SENSOR_SERVICE); //register sensor for detecting light
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-        lightSensorController = new LightSensorController(this);
+        lightSensorController = new LightSensorController();
         activity = this;
     }
 
