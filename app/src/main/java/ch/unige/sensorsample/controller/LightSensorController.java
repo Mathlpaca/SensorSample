@@ -9,8 +9,6 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.util.Log;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import ch.unige.sensorsample.view.SecondActivity;
 
 /*
@@ -18,11 +16,6 @@ import ch.unige.sensorsample.view.SecondActivity;
  * light sensor, written the values in textview
  */
 public class LightSensorController implements SensorEventListener {
-    private AppCompatActivity activity;
-
-    public LightSensorController(AppCompatActivity activity) {
-        this.activity = activity;
-    }
 
     @Override
     public void onSensorChanged(SensorEvent event) {

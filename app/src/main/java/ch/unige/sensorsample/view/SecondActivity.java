@@ -9,7 +9,9 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,25 +28,33 @@ public class SecondActivity extends AppCompatActivity {
     private Sensor sensor;
     private LightSensorController lightSensorController;
     private static AppCompatActivity activity;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         //define a ImageButton
         ImageButton buttonToFirstActivity = findViewById(R.id.button2);
+
         ChangeActivityController changeActivityController = new ChangeActivityController(this.getBaseContext()); //define a controller
         changeActivityController.setNameOfActivity(ActivityModel.ACTIVITY_NAME_MAIN);
         buttonToFirstActivity.setOnClickListener(changeActivityController); //hook the listener to button, in order to capture the click (tap)
         sensorManager = (SensorManager) getSystemService(Service.SENSOR_SERVICE); //register sensor for detecting light
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-        lightSensorController = new LightSensorController(this);
+        lightSensorController = new LightSensorController();
         activity = this;
     }
 
     public void printSensorValue(String value) {
         TextView txViewLightSensor = activity.findViewById(R.id.textViewLight);
         txViewLightSensor.setText(String.valueOf(value));
+        ProgressBar lightMeter = activity.findViewById(R.id.lightmeter);
+        try {
+            //parse sting in float and float in int
+            int lightFloat = (int) Float.parseFloat(value);
+            lightMeter.setProgress(lightFloat);
+        }catch (NumberFormatException e){
+            Toast.makeText(activity.getApplicationContext(), "Error to show light sensor in light meter", Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
