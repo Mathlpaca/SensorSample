@@ -1,6 +1,6 @@
 # Android Example Application
 This is an example Android Application that permits to manage gyroscope and light sensor.
-It is made uo from three (3) activity: main, second and third.
+It is made up from three (3) activity: main, second and third.
 Moreover, an async **HTTP GET** is implemented with _loop library_.
 The mangare sensor is implemented with Model-View-Controller design patter.
 
@@ -12,10 +12,14 @@ Import the code from GitHub, using two approaches:
 ### Links
 
 [Model-View-Controller design pattern](https://www.tutorialspoint.com/design_pattern/mvc_pattern.htm)
+
 [Environment sensor](https://developer.android.com/guide/topics/sensors/sensors_environment)
-[Sensor overview]{https://developer.android.com/guide/topics/sensors/sensors_overview}
-[Loop library documentation]{https://loopj.com/android-async-http/}
-[Code style Google]{https://google.github.io/styleguide/javaguide.html}
+
+[Sensor overview](https://developer.android.com/guide/topics/sensors/sensors_overview)
+
+[Loop library documentation](https://loopj.com/android-async-http/)
+
+[Code style Google](https://google.github.io/styleguide/javaguide.html)
 
 #### Contributions
 This code is developed as an example for the seminar of programming languages at University of Geneva.

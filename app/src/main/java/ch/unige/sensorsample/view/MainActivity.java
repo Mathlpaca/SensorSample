@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         //Declare a sensor manager in order to access sensor values
         sensorManager = (SensorManager) getSystemService(Service.SENSOR_SERVICE);
         //using a controller patter to manage a sensor
-        gyroscopeSensorController = new GyroscopeSensorController(this); //declare gyroscope controller
+        gyroscopeSensorController = new GyroscopeSensorController(); //declare gyroscope controller
         sensorGyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
     }
 
